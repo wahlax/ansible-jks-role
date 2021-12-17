@@ -1,0 +1,7 @@
+---
+
+jks_location: /usr/local/java/selfsigned.jks
+jks_owner: root
+jks_password: change_it
+jks_subject: "CN=cName, OU=orgUnit, O=org, L=city, S=state, C=countryCode" 
+jks_alias: self

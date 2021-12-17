@@ -1,0 +1,6 @@
+---
+
+- name: owner only permissions
+  ansible.builtin.file:
+    path: "{{jks_location}}"
+    mode: '600'

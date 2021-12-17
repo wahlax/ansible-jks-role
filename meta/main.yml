@@ -1,0 +1,14 @@
+---
+
+dependencies:
+  - src: https://github.com/wahlax/ansible-jdk-role
+    version: main
+    name: wahlax.jdk
+
+
+galaxy_info:
+  role_name: jks
+  author: wahlax
+  description: java keystore
+  company: WAHLAX LLC
+  license: MIT

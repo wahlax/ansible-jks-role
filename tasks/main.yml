@@ -1,0 +1,10 @@
+---
+# Create Self Signed Cert
+
+- name: Create keystore
+  ansible.builtin.command:
+    cmd: /usr/local/java/latest/bin/keytool -genkey -keyalg RSA -validity 365 -keysize 2048 -alias {{jks_alias}} -keystore {{jks_location}} -dname "{{jks_subject}}" -keypass {{jks_password}} -storepass {{jks_password}}
+    creates: "{{jks_location}}"
+  become: yes
+  become_user: "{{jks_owner}}"
+  notify: owner only permissions
