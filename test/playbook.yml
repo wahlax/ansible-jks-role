@@ -1,6 +1,11 @@
 - hosts: all
   become: yes
 
+  pre_tasks:
+    - name: Init Base VM
+      ansible.builtin.include_role:
+        name: wahlax.init_base
+
   roles:
     - role: ../../ansible-jks-role
       jks_location: /home/vagrant/selfsigned.jks
